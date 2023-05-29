@@ -28,6 +28,8 @@ namespace Barbershop.App
             InitializeComponent();
 
             _recordPage= new RecordPage();
+
+            MainFrame.Navigate(_recordPage);
         }
 
         private void GoToRecord_Click(object sender, RoutedEventArgs e)

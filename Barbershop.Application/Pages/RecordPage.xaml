@@ -3,12 +3,67 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Barbershop.App.Pages"
+      xmlns:local="clr-namespace:Barbershop.App.Pages" xmlns:extToolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RecordPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0"
+                   Fill="#FF7B40"
+                   Width="250"
+                   Height="350"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   Margin="0 0 30 40"/>
+
+        <Image Grid.Column="0"
+               Source="/Resource/Фото.png"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Width="400"
+               Height="350"/>
+
+        <StackPanel Grid.Column="1"
+                    Margin="50 0 0 0"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+
+            <TextBlock Text="Телефон"
+                       Style="{StaticResource MainText}"/>
+            <extToolkit:MaskedTextBox x:Name="PhoneNumberBox" Mask="+7 (999) 000-0000"
+                                      Width="auto"
+                                      Height="auto"
+                                      FontSize="20"
+                                      FontWeight="SemiBold"/>
+
+            <TextBlock Text="Имя"
+                       Style="{StaticResource MainText}"/>
+            <TextBox x:Name="NameBox"/>
+
+            <TextBlock Text="Фамилия"
+                       Style="{StaticResource MainText}"/>
+            <TextBox x:Name="SurNameBox"/>
+
+            <TextBlock Text="Услуга"
+                       Style="{StaticResource MainText}"/>
+            <ComboBox x:Name="ServicesComboBox"/>
+
+            <TextBlock Text="Время"
+                       Style="{StaticResource MainText}"/>
+            <DatePicker x:Name="Date"/>
+
+            <TextBlock Text="Время"
+                       Style="{StaticResource MainText}"/>
+            <ComboBox x:Name="TimeComboBox"/>
+
+            <Button Content="Записать"/>
+        </StackPanel>
+
     </Grid>
 </Page>
