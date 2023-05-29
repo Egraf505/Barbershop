@@ -11,4 +11,8 @@
     <ProjectReference Include="..\Barbershop.Persistence\Barbershop.Persistence.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
 </Project>

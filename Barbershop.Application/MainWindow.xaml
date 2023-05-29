@@ -5,8 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Barbershop.App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="500" Width="1000"
+        MaxHeight="800" MaxWidth="1000"
+        MinHeight="500" MinWidth="1000"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#ECEBE5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="0">
+
+            <Button Content="Запись" Style="{StaticResource MainButton}"/>
+            <Button Content="Услуги" Style="{StaticResource MainButton}"/>
+            <Button Content="Календарь" Style="{StaticResource MainButton}"/>
+
+        </StackPanel>
+
+        <Frame x:Name="MainFrame" Grid.Row="1"/>
+
     </Grid>
 </Window>
