@@ -5,8 +5,8 @@ namespace Barbershop.Persistence
 {
     public class BarbershopContext : DbContext
     {
-        DbSet<Record> Records { get; set; }
-        DbSet<Service> Services { get; set; }
+        public DbSet<Record> Records { get; set; }
+        public DbSet<Service> Services { get; set; }
 
         public BarbershopContext()
         {

@@ -62,7 +62,8 @@
                        Style="{StaticResource MainText}"/>
             <ComboBox x:Name="TimeComboBox"/>
 
-            <Button Content="Записать"/>
+            <Button Content="Записать"
+                    Style="{StaticResource SendButton}"/>
         </StackPanel>
 
     </Grid>

@@ -1,5 +1,4 @@
-﻿using Barbershop.Persistence;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,21 +16,13 @@ using System.Windows.Shapes;
 namespace Barbershop.App.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для RecordPage.xaml
-    /// </summary> 
-
-    public partial class RecordPage : Page
+    /// Логика взаимодействия для AddService.xaml
+    /// </summary>
+    public partial class AddService : Page
     {
-        private readonly BarbershopContext _context;
-
-        public RecordPage()
+        public AddService()
         {
             InitializeComponent();
-
-            using (_context = new BarbershopContext())
-            {
-                ServicesComboBox.ItemsSource = _context.Services.ToList();
-            }
         }
     }
 }

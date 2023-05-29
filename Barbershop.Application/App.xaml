@@ -65,5 +65,12 @@
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
         </Style>
+
+        <Style x:Key="SendButton" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#FF7B40"/>
+            <Setter Property="Foreground" Value="#000000"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
     </Application.Resources>
 </Application>
