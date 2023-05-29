@@ -1,5 +1,4 @@
-﻿using Barbershop.App.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,25 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Barbershop.App
+namespace Barbershop.App.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для RecordPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class RecordPage : Page
     {
-        private RecordPage _recordPage;
-
-        public MainWindow()
+        public RecordPage()
         {
             InitializeComponent();
-
-            _recordPage= new RecordPage();
-        }
-
-        private void GoToRecord_Click(object sender, RoutedEventArgs e)
-        {
-            MainFrame.Navigate(_recordPage);
         }
     }
 }
