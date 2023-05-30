@@ -10,7 +10,7 @@ namespace Barbershop.Persistence
 
         public BarbershopContext()
         {
-
+            Database.EnsureCreated();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

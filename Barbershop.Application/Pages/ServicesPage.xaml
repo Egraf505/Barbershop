@@ -9,6 +9,10 @@
       Title="ServicesPage">
 
     <Grid>
-        
+        <Button Grid.Column="1"
+                Content="Добавить услугу"
+                Style="{StaticResource SendButton}"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top" Click="AddedService_Click"/>
     </Grid>
 </Page>

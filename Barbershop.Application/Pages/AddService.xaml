@@ -9,6 +9,26 @@
       Title="AddService">
 
     <Grid>
-        
+        <StackPanel Orientation="Vertical">
+
+            <Button Content="Назад" Style="{StaticResource SendButton}"
+                    HorizontalAlignment="Left" Click="Button_Click"/>
+
+            <TextBlock Text="Название"
+                       Style="{StaticResource MainText}"/>
+            <TextBox x:Name="TitleBox"/>
+
+            <TextBlock Text="Стоимость"
+                       Style="{StaticResource MainText}"/>
+            <TextBox x:Name="PriceBox" PreviewTextInput="PriceBox_PreviewTextInput"/>
+            
+            <TextBlock Text="Описание"
+                       Style="{StaticResource MainText}"/>
+            <TextBox x:Name="DescriptionBox"/>
+
+            <Button Content="Сохранить" Style="{StaticResource SendButton}"
+                    HorizontalAlignment="Center" Click="SaveServiceBtn_Click"/>
+
+        </StackPanel>
     </Grid>
 </Page>

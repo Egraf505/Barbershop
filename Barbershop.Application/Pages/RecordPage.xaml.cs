@@ -22,15 +22,31 @@ namespace Barbershop.App.Pages
 
     public partial class RecordPage : Page
     {
-        private readonly BarbershopContext _context;
-
+        private BarbershopContext _context;
         public RecordPage()
         {
             InitializeComponent();
 
-            using (_context = new BarbershopContext())
+            SetService();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SetService();
+        }
+
+        private void SetService()
+        {
+            try
             {
-                ServicesComboBox.ItemsSource = _context.Services.ToList();
+                using (_context = new BarbershopContext())
+                {
+                    ServicesComboBox.ItemsSource = _context.Services.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

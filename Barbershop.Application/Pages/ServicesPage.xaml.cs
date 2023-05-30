@@ -20,9 +20,17 @@ namespace Barbershop.App.Pages
     /// </summary>
     public partial class ServicesPage : Page
     {
+        private AddService _addServicePage;
         public ServicesPage()
         {
             InitializeComponent();
+
+            _addServicePage = new AddService();
+        }
+
+        private void AddedService_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalFrame.Frame.Navigate(_addServicePage);
         }
     }
 }
