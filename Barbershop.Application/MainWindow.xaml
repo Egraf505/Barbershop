@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="1000"
         MaxHeight="800" MaxWidth="1200"
-        MinHeight="600" MinWidth="1000"
+        MinHeight="700" MinWidth="1000"
         WindowStartupLocation="CenterScreen">
     <Grid Background="#ECEBE5">
         <Grid.RowDefinitions>
@@ -20,7 +20,7 @@
 
             <Button Content="Запись" Style="{StaticResource MainButton}"
                     Click="GoToRecord_Click"/>
-            <Button Content="Услуги" Style="{StaticResource MainButton}"/>
+            <Button Content="Услуги" Style="{StaticResource MainButton}" Click="Button_Click"/>
             <Button Content="Календарь" Style="{StaticResource MainButton}"/>
 
         </StackPanel>

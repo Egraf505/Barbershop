@@ -67,6 +67,12 @@ namespace Barbershop.App.Pages
                     {
                         var newService = new Service() { Price = int.Parse(PriceBox.Text), Title = TitleBox.Text, Description = DescriptionBox.Text };
 
+                        if (_context.Services.Any(x => x.Title == newService.Title && x.Price == newService.Price && x.Description == newService.Description))
+                        {
+                            MessageBox.Show("Такая услуга уже есть");
+                            return;
+                        }
+
                         _context.Services.Add(newService);
                         _context.SaveChanges();
 

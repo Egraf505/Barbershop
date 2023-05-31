@@ -22,19 +22,28 @@ namespace Barbershop.App
     public partial class MainWindow : Window
     {
         private RecordPage _recordPage;
+        private ServicesPage _servicesPage;
 
         public MainWindow()
         {
             InitializeComponent();
 
             _recordPage= new RecordPage();
+            _servicesPage = new ServicesPage();
 
             GlobalFrame.Frame = MainFrame;
+
+            MainFrame.Navigate(_recordPage);
         }
 
         private void GoToRecord_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(_recordPage);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(_servicesPage);
         }
     }
 }

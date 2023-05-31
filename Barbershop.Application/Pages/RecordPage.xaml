@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Barbershop.App.Pages" xmlns:extToolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:local="clr-namespace:Barbershop.App.Pages" xmlns:extToolkit="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:sys="clr-namespace:System;assembly=netstandard"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RecordPage">
@@ -35,12 +35,6 @@
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top" Click="Button_Click_1"/>
 
-        <Button Grid.Column="1"
-                Content="Добавить услугу"
-                Style="{StaticResource SendButton}"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Top" Click="Button_Click"/>
-
         <StackPanel Grid.Column="1"
                     Margin="50 0 0 0"
                     HorizontalAlignment="Left"
@@ -62,6 +56,10 @@
                        Style="{StaticResource MainText}"/>
             <TextBox x:Name="SurNameBox"/>
 
+            <TextBlock Text="Отчество"
+                       Style="{StaticResource MainText}"/>
+            <TextBox x:Name="MiddleNameBox"/>
+
             <TextBlock Text="Услуга"
                        Style="{StaticResource MainText}"/>
             <ComboBox x:Name="ServicesComboBox" DisplayMemberPath="Title"/>
@@ -72,10 +70,20 @@
 
             <TextBlock Text="Время"
                        Style="{StaticResource MainText}"/>
-            <ComboBox x:Name="TimeComboBox"/>
+            <ComboBox x:Name="TimeComboBox">
+                <sys:String>10:00</sys:String>
+                <sys:String>11:00</sys:String>
+                <sys:String>12:00</sys:String>
+                <sys:String>13:00</sys:String>
+                <sys:String>14:00</sys:String>
+                <sys:String>15:00</sys:String>
+                <sys:String>16:00</sys:String>
+                <sys:String>17:00</sys:String>
+                <sys:String>18:00</sys:String>
+            </ComboBox>
 
             <Button Content="Записать"
-                    Style="{StaticResource SendButton}"/>
+                    Style="{StaticResource SendButton}" Click="Button_Click"/>
         </StackPanel>
 
     </Grid>

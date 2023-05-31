@@ -9,6 +9,6 @@ namespace Barbershop.Domain
         public string MiddleName { get; set; } = null!;
         public string PhoneNumber { get; set; } = null!;
         public DateTime DateOfRecord { get; set; }
-        List<Service> Services { get; set; } = new();
+        public List<Service> Services { get; set; } = new();
     }
 }
