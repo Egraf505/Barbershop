@@ -21,7 +21,7 @@
             <Button Content="Запись" Style="{StaticResource MainButton}"
                     Click="GoToRecord_Click"/>
             <Button Content="Услуги" Style="{StaticResource MainButton}" Click="Button_Click"/>
-            <Button Content="Календарь" Style="{StaticResource MainButton}"/>
+            <Button Content="Календарь" Style="{StaticResource MainButton}" Click="Button_Click_1"/>
 
         </StackPanel>
 

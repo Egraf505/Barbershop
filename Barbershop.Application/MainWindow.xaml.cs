@@ -23,6 +23,7 @@ namespace Barbershop.App
     {
         private RecordPage _recordPage;
         private ServicesPage _servicesPage;
+        private RecordDatePage _recordDatePage;
 
         public MainWindow()
         {
@@ -30,6 +31,7 @@ namespace Barbershop.App
 
             _recordPage= new RecordPage();
             _servicesPage = new ServicesPage();
+            _recordDatePage = new RecordDatePage();
 
             GlobalFrame.Frame = MainFrame;
 
@@ -44,6 +46,11 @@ namespace Barbershop.App
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(_servicesPage);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(_recordDatePage);
         }
     }
 }
